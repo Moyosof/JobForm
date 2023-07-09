@@ -1,0 +1,97 @@
+﻿@model JobForm.Models.FormRequirement
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>FormRequirement</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="JobTitle" class="control-label"></label>
+                <input asp-for="JobTitle" class="form-control" />
+                <span asp-validation-for="JobTitle" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NumberOfPosition" class="control-label"></label>
+                <input asp-for="NumberOfPosition" class="form-control" />
+                <span asp-validation-for="NumberOfPosition" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="JobDescription" class="control-label"></label>
+                <input asp-for="JobDescription" class="form-control" />
+                <span asp-validation-for="JobDescription" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EducationRequirement" class="control-label"></label>
+                <input asp-for="EducationRequirement" class="form-control" />
+                <span asp-validation-for="EducationRequirement" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Experience" class="control-label"></label>
+                <input asp-for="Experience" class="form-control" />
+                <span asp-validation-for="Experience" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Specialization" class="control-label"></label>
+                <select asp-for="Specialization" asp-items="Html.GetEnumSelectList<Specialization>()" class="form-control"></select>
+                <option value="">Select Specialization</option>
+                <span asp-validation-for="Specialization" class="text-danger"></span>
+            </div>
+            @*<div class="form-group">
+                <label asp-for="ApplicationDate" class="control-label"></label>
+                <input asp-for="ApplicationDate" class="form-control" />
+                <span asp-validation-for="ApplicationDate" class="text-danger"></span>
+            </div>*@
+            <div class="form-group">
+                <label asp-for="SalaryAmount" class="control-label"></label>
+                <input asp-for="SalaryAmount" class="form-control" />
+                <span asp-validation-for="SalaryAmount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="JobType" class="control-label"></label>
+                <select asp-for="JobType" asp-items="Html.GetEnumSelectList<JobType>()" class="form-control"></select>
+                <option value="">Select Job Type</option>
+                <span asp-validation-for="JobType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CompanyName" class="control-label"></label>
+                <input asp-for="CompanyName" class="form-control" />
+                <span asp-validation-for="CompanyName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CompanyAddress" class="control-label"></label>
+                <input asp-for="CompanyAddress" class="form-control" />
+                <span asp-validation-for="CompanyAddress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Country" class="control-label"></label>
+                <input asp-for="Country" class="form-control" />
+                <span asp-validation-for="Country" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="State" class="control-label"></label>
+                <input asp-for="State" class="form-control" />
+                <span asp-validation-for="State" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <button type="submit" value="Save" class="btn btn-primary" style="width:150px">Update</button>
+                <a asp-controller="FormRequirement" asp-action="Index" class="btn btn-primary" style="width:150px">Back to List</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
